@@ -23,3 +23,12 @@ changedTypedf = df \
 
 changedTypedf.printSchema()
 
+df2 = changedTypedf.withColumnRenamed("Order ID", "order_id"). \
+    withColumnRenamed("Product", "product"). \
+    withColumnRenamed("Quantity Ordered", "quantity_ordered"). \
+    withColumnRenamed("Price Each", "price"). \
+    withColumnRenamed("Order Date", "order_date"). \
+    withColumnRenamed("Purchase Address", "address")
+df2.show(5)
+df2.printSchema()
+
