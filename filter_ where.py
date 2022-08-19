@@ -29,3 +29,4 @@ df2 = df2.withColumn("City", split(df2["address"], ",").getItem(1)). \
     withColumn("State", split(df2["address"], ",").getItem(2))
 
 df2.filter((df2.product == "Wired Headphones") & (df2.City == "Los Angeles")).show()
+df2.filter(df2.City == "Seattle").show()
